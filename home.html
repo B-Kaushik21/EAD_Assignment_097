@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Kaushik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="name">
+            <h1>Kaushik</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="#services" onclick="showSection('services')">Services</a></li>
+                <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact Me</a></li>
+                <li><a href="resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    <section id="home" class="section active" >
+        <h2>Welcome to My <span style="color:red;">Portfolio</span></h2>
+        <p style="font-size: 72px; font-weight: bold;">I am <span style="color: red;">Kaushik</span>.</p> 
+    </section>
+
+    <section id="about" class="section">
+        <div class="aboutclass"> <!-- Wrapper to handle flex -->
+            <img src="mypic.jpg" alt="Kaushik's Picture" id="mypic">
+            
+                <p id="homepara">
+                    I'm a passionate <span style="color: red;">web developer</span> with a knack for turning ideas into reality through code. I thrive on creating visually appealing, user-friendly web experiences that captivate and inspire. Whether it's designing sleek websites, building responsive web apps, or exploring the latest tech trends, I’m always eager to push the boundaries and craft something extraordinary.
+                    Let’s build the future of the web together!
+                </p>
+        </div>
+    </section>
+    
+
+    <section id="services" class="section">
+        <h2 style="color: red; margin:0">Services</h2>
+        <div class="serviceclass">
+            <div class="service-item" style="padding: 10px;">
+                <h3>Web Development</h3>
+                <p style="font-size: 25px;">Offering beginner to intermediate web development services, including the creation of responsive and user-friendly websites. Utilizing technologies such as HTML, CSS, JavaScript, and popular frameworks to build functional and visually appealing web solutions tailored to your needs.</p>
+            </div>
+            <div class="service-item">
+                <h3>Machine Learning</h3>
+                <p style="font-size: 25px;">Providing introductory machine learning services, including basic data analysis and model development. Focused on leveraging foundational algorithms to assist with predictions and enhance performance, helping you gain insights and improve your projects.</p>
+            </div>
+        </div>
+        
+    </section>  
+
+
+    <section id="projects" class="section">
+        <h2 style="color: red; margin: 0;">Projects</h2>
+        <div class="projectclass">
+            <div class="project-item">
+                <h3>Book My Chef</h3>
+                <p style="font-size: 20px;">A web application built with React and Firebase.</p>
+                <img src="bookmychef pic.png" alt="" style="width: 500px; height: 300px;">
+            </div>
+            <div class="project-item">
+                <h3>Video Conferencing using WebRTC</h3>
+                <p style="font-size: 20px;">A conferencing website using HTML, CSS, and JavaScript.</p>
+                <img src="video conference pic.png" alt="" style="width: 500px;height: 300px;">
+                
+            </div>
+        </div>
+        
+    </section>
+
+    
+    <section id="contact" class="section">
+        <h2 style="color: red;margin: 0;">Contact Me</h2>
+        <div class="contactform">
+           
+            <form id="contact-form">
+                <h3>Fill this to contact me</h3>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+    
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kaushik. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId){
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            // Show the selected section
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home'); // Show the home section by default
+        });
+    </script>
+</body>
+</html>

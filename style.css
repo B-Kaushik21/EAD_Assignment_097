@@ -1,0 +1,244 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: black;
+}
+
+/* Header styles */
+header {
+    background: #333;
+    color: #fff;
+    padding:20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Name on the left */
+header .name h1 {
+    margin: 0;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Section styles */
+.section {
+    display: none;
+    padding: 50px 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.section.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Typography and content styles */
+#homepara {
+    margin-left: 10px;
+    font-size: 2.0em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+/* Contact form styles */
+.contactform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 450px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(128, 128, 128);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    max-width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+button {
+    background-color: rgba(25, 129, 189, 0.762);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: green;
+}
+
+/* Image styles */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.serviceclass, .projectclass {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* Resume link/button styles */
+.resume-link, .resume-btn {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #5491ad;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.resume-link:hover, .resume-btn:hover {
+    background-color: #575757;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #homepara {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .aboutclass, .serviceclass, .projectclass {
+        flex-direction: column;
+    }
+
+    #contact-form {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+}
+/* About section styles */
+.aboutclass {
+    display: flex;
+    justify-content: space-around;
+}
+
+#mypic {
+    max-width: 100%;
+    height: auto;
+    width: 300px; /* Adjust as needed */
+    border-radius: 10px;
+}
+
+/* Content area styles */
+.about-content {
+    max-width: 600px; /* Limit the width of the text area */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .aboutclass {
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+        text-align: center; /* Center text and button */
+    }
+    #mypic {
+        width: 100%; /* Make the image full width */
+        margin-bottom: 20px; /* Space below image */
+    }
+}
